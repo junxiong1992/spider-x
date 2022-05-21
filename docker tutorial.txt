@@ -16,8 +16,16 @@ docker run -d -p 8888:9000 --name=portainer --restart=always -v /var/run/docker.
 docker run -itd --name redis -p 6379:6379 redis --requirepass 123456
 docker run --name proxy_pool --env DB_CONN=redis://:@192.168.1.17:6379/0 -p 5010:5010 jhao104/proxy_pool:2.4.0
 
+git命令
+git add .
+git commit -m 'update'
+git push
+
+远程端
+git clone https://github.com/junxiong1992/spider-x.git
+git add
 
 
-打包镜像
-docker build -t scrapy-xiuren:1 .
+docker打包镜像
+docker build -t scrapy-xiuren .
 
