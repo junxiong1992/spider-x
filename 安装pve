@@ -1,0 +1,20 @@
+参考司波图教程
+https://gitee.com/spoto/PVE_Generic_AIO#%E4%B8%8B%E8%BD%BDpve%E7%9A%84iso%E9%95%9C%E5%83%8F--%E5%86%99%E7%9B%98
+
+export http_proxy=http://192.168.1.102:7890
+export https_proxy=http://192.168.1.102:7890
+/etc/apt/sources.list/ceph.list 注掉
+
+
+
+
+替换pve CT template源
+cp /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm_back
+sed -i 's|http://download.proxmox.com|https://mirrors.tuna.tsinghua.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm
+systemctl restart pvedaemon.service
+
+/etc/apt/sources.list
+
+/etc/apt/sources.list.d/pve-enterprise.list
+
+

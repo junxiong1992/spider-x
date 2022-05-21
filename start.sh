@@ -1,0 +1,1 @@
+scrapy crawl xiurenspider -o xiren.csv > file.txt
